@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:write": "next lint --cache --fix",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -28,6 +29,6 @@
     "prettier": "2.8.3"
   },
   "lint-staged": {
-    "*.{tsx,ts,js,jsx}": ["eslint", "prettier --write"]
+    "*.{tsx,ts,js,jsx,json,md}": "prettier --write"
   }
 }
