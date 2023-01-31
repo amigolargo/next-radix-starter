@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import Head from "next/head";
+import { darkTheme } from "@/stitches.config";
 import { Flex } from "@/components/primitives/Flex";
 import { Block } from "@/components/primitives/Block";
 import { Text } from "@/components/primitives/Text";
@@ -14,11 +15,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainContainer>
-        <Block>
-          <Text size={1}>Text 1</Text>
+        <Block className={darkTheme}>
+          <Text size={1} variant="primary">
+            Text 1
+          </Text>
         </Block>
         <Block>
-          <Text size={2}>Text 2</Text>
+          <Text size={2} variant="primary">
+            Text 2
+          </Text>
         </Block>
         <Block>
           <Text variant="red" gradient={true} size={3}>

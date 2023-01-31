@@ -1,5 +1,6 @@
 import { red, crimson } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
+import type * as Stitches from "@stitches/react";
 
 export const {
   styled,
@@ -17,6 +18,9 @@ export const {
       gray500: "lightgray",
       ...red,
       ...crimson,
+      // semantic colours
+      foreground: "#000000",
+      background: "#efefef",
     },
     space: {
       1: "5px",
@@ -48,5 +52,12 @@ export const {
   },
   utils: {
     marginX: (value: string) => ({ marginLeft: value, marginRight: value }),
+  },
+});
+
+export const darkTheme = createTheme({
+  colors: {
+    foreground: "#ffffff",
+    background: "#999999",
   },
 });

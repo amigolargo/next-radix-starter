@@ -25,6 +25,10 @@ export const Text = styled("span", {
       },
     },
     variant: {
+      primary: {
+        color: "$foreground",
+        backgroundColor: "$background",
+      },
       red: {
         color: "$red11",
       },
