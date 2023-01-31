@@ -4,6 +4,8 @@ import { darkTheme } from "@/stitches.config";
 import { Flex } from "@/components/primitives/Flex";
 import { Block } from "@/components/primitives/Block";
 import { Text } from "@/components/primitives/Text";
+import { FaceIcon, ImageIcon, SunIcon } from "@radix-ui/react-icons";
+import { Camera } from "react-feather";
 
 export default function Home() {
   return (
@@ -18,18 +20,22 @@ export default function Home() {
         <Block className={darkTheme}>
           <Text size={1} variant="primary">
             Text 1
+            <FaceIcon />
           </Text>
         </Block>
         <Block>
           <Text size={2} variant="primary">
             Text 2
+            <SunIcon />
           </Text>
         </Block>
         <Block>
           <Text variant="red" gradient={true} size={3}>
             Text 3
+            <ImageIcon />
           </Text>
         </Block>
+        <Camera size={50} color="blue" strokeWidth={0.5} />
       </MainContainer>
     </>
   );
