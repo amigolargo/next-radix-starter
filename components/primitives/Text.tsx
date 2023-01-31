@@ -4,7 +4,7 @@ export const Text = styled("span", {
   // Reset
   lineHeight: "1",
   margin: "0",
-  fontFamily: "$spaceGrotesk",
+  fontFamily: "$headings",
   fontWeight: "$heavy",
   fontVariantNumeric: "tabular-nums",
   display: "block",

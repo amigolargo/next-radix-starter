@@ -1,6 +1,5 @@
 import type { AppProps } from "next/app";
 import { Inter, Space_Grotesk } from "@next/font/google";
-import { Block } from "components/primitives/Block";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
@@ -15,8 +14,14 @@ const spaceGrotesk = Space_Grotesk({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Block className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <>
+      <style jsx global>{`
+        :root {
+          --space-grotesk-font: ${spaceGrotesk.style.fontFamily};
+          --inter-font: ${inter.style.fontFamily};
+        }
+      `}</style>
       <Component {...pageProps} />
-    </Block>
+    </>
   );
 }

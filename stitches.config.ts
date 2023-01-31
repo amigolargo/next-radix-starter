@@ -24,10 +24,10 @@ export const {
       3: "15px",
       4: "60px",
     },
-    // fonts: {
-    //   inter: $inter,
-    //   spaceGrotesk: $space-grotesk,
-    // },
+    fonts: {
+      headings: "var(--inter-font)",
+      body: "var(--space-grotesk-font)",
+    },
     fontSizes: {
       1: "24px",
       2: "36px",
