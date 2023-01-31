@@ -4,6 +4,7 @@ import { darkTheme } from "@/stitches.config";
 import { Flex } from "@/components/primitives/Flex";
 import { Block } from "@/components/primitives/Block";
 import { Text } from "@/components/primitives/Text";
+import { AccordionDemo } from "@/components/organisms/Accordion";
 import { FaceIcon, ImageIcon, SunIcon } from "@radix-ui/react-icons";
 import { Camera } from "react-feather";
 
@@ -36,6 +37,7 @@ export default function Home() {
           </Text>
         </Block>
         <Camera size={50} color="blue" strokeWidth={0.5} />
+        <AccordionDemo />
       </MainContainer>
     </>
   );
