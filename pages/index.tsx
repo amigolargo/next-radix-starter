@@ -1,10 +1,18 @@
 import React, { PropsWithChildren } from "react";
 import Head from "next/head";
 import { darkTheme } from "@/stitches.config";
+import Image from "next/image";
 import { Flex } from "@/components/primitives/Flex";
 import { Block } from "@/components/primitives/Block";
 import { Text } from "@/components/primitives/Text";
-import { AccordionDemo } from "@/components/organisms/Accordion";
+import {
+  AccordionItem,
+  AccordionRoot,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/organisms/Accordion/AccordionStyled";
+import { AccordionDemo } from "@/components/organisms/Accordion/Accordion";
+import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 import { FaceIcon, ImageIcon, SunIcon } from "@radix-ui/react-icons";
 import { Camera } from "react-feather";
 
@@ -37,6 +45,28 @@ export default function Home() {
           </Text>
         </Block>
         <Camera size={50} color="blue" strokeWidth={0.5} />
+        <AccordionRoot type="single" defaultValue="item-2" collapsible>
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Image shown by default</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-2">
+            <AccordionTrigger>Is it unstyled?</AccordionTrigger>
+            <AccordionContent>
+              <AspectRatio.Root ratio={16 / 9}>
+                <Image
+                  src="https://images.unsplash.com/photo-1535025183041-0991a977e25b?w=300&dpr=2&q=80"
+                  alt="Picture of the author"
+                  width={300}
+                  height={169}
+                />
+              </AspectRatio.Root>
+            </AccordionContent>
+          </AccordionItem>
+        </AccordionRoot>
         <AccordionDemo />
       </MainContainer>
     </>
