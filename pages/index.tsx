@@ -14,7 +14,7 @@ import {
 import { AccordionDemo } from "@/components/organisms/Accordion/Accordion";
 import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 import { FaceIcon, ImageIcon, SunIcon } from "@radix-ui/react-icons";
-import { Camera } from "react-feather";
+import { Apple } from "lucide-react";
 
 export default function Home() {
   return (
@@ -44,7 +44,7 @@ export default function Home() {
             <ImageIcon />
           </Text>
         </Block>
-        <Camera size={50} color="blue" strokeWidth={0.5} />
+        <Apple size={50} color="blue" strokeWidth={2} />
         <AccordionRoot type="single" defaultValue="item-2" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger>Image shown by default</AccordionTrigger>
