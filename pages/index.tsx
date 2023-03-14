@@ -15,6 +15,7 @@ import { AccordionDemo } from "@/components/organisms/Accordion/Accordion";
 import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 import { FaceIcon, ImageIcon, SunIcon } from "@radix-ui/react-icons";
 import { Apple } from "lucide-react";
+import { LabelDemo } from "components/atoms/Label/Label";
 
 export default function Home() {
   return (
@@ -54,7 +55,7 @@ export default function Home() {
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger>Is it unstyled?</AccordionTrigger>
+            <AccordionTrigger>huh</AccordionTrigger>
             <AccordionContent>
               <AspectRatio.Root ratio={16 / 9}>
                 <Image
@@ -67,6 +68,7 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
         </AccordionRoot>
+        <LabelDemo />
         <AccordionDemo />
       </MainContainer>
     </>
