@@ -9,7 +9,8 @@ input {
   font-size: 15px;
   font-weight: 500;
   line-height: 35px;
-  color: white;
+  color: var(--colors-red11);
+  font-family: var(--space-grotesk-font);
 }
 
 .Input {
@@ -22,7 +23,7 @@ input {
   height: 35px;
   font-size: 15px;
   line-height: 1;
-  color: white;
+  color: var(--colors-red11);
   background-color: var(--blackA5);
   box-shadow: 0 0 0 1px var(--blackA9);
   font-family: var(--space-grotesk-font);
